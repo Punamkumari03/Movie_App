@@ -63,7 +63,7 @@ function App() {
     e.preventDefault()
     const li = e.target.parentElement;
     const id = li.id
-    const del = await fetch(`https://movieapp-b7ef4-default-rtdb.firebaseio.com/movies.json/${id}`,{
+    const del = await fetch(`https://movieapp-b7ef4-default-rtdb.firebaseio.com/movies/${id}.json`,{
       method:'DELETE'
     })
     const data = await del.json()
